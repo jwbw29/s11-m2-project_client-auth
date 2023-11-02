@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 const AddFriends = () => {
   const [form, setForm] = useState({
@@ -12,13 +12,8 @@ const AddFriends = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token");
-    axios
-      .post("http://localhost:9000/api/friends", form, {
-        headers: {
-          authorization: token,
-        },
-      })
+    axiosWithAuth()
+      .post("/friends", form)
       .then(() => {
         navigate("/friends");
       })
