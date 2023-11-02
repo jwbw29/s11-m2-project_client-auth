@@ -8,7 +8,7 @@ const Login = () => {
     password: "",
   });
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
