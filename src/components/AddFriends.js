@@ -28,28 +28,20 @@ const AddFriends = () => {
   };
 
   return (
-    <div>
-      <h2>AddFriends</h2>
+    <div className="addFriend">
+      <h2>AddFriends.</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="name">
           <label htmlFor="name">Friend Name</label>
-          <input
-            type="text"
-            placeholder="name"
-            id="name"
-            onChange={handleChange}
-          />
+          <input type="text" id="name" onChange={handleChange} />
         </div>{" "}
-        <div>
+        <div className="email">
           <label htmlFor="email">Friend Email</label>
-          <input
-            type="text"
-            placeholder="email"
-            id="email"
-            onChange={handleChange}
-          />
+          <input type="text" id="email" onChange={handleChange} />
         </div>
-        <button type="submit">Add Friend</button>
+        <button id="addFriend" type="submit">
+          Add Friend
+        </button>
       </form>
     </div>
   );

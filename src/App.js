@@ -13,18 +13,20 @@ function App() {
     <div className="App">
       <nav>
         <h2 id="title">Friends Database</h2>
-        <Link className="link" to="/login">
-          Login.
-        </Link>
-        <Link className="link" to="/friends">
-          FriendsList.
-        </Link>
-        <Link className="link" to="/friends/add">
-          Add Friend.
-        </Link>
-        <Link className="link" to="/logout">
-          Logout.
-        </Link>
+        <div className="links">
+          <Link className="link" to="/login">
+            Login.
+          </Link>
+          <Link className="link" to="/friends">
+            FriendsList.
+          </Link>
+          <Link className="link" to="/friends/add">
+            Add Friend.
+          </Link>
+          <Link className="link" to="/logout">
+            Logout.
+          </Link>
+        </div>
       </nav>
       <Routes>
         <Route path="/" element={<Login />} />

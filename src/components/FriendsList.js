@@ -12,13 +12,13 @@ const FriendsList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>FriendsList</h2>
+    <div className="friendsList">
+      <h2>FriendsList.</h2>
       <ul>
         {friends.map((friend, key) => {
           return (
             <li key={key}>
-              {friend.name} - {friend.email}
+              {friend.name} // {friend.email}
             </li>
           );
         })}
